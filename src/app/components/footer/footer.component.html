@@ -1,4 +1,6 @@
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<footer
+  class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top"
+>
   <div class="col-md-4 d-flex align-items-center">
     <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
       <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
@@ -6,9 +8,31 @@
     <span class="text-muted">© 2021 Company, Inc</span>
   </div>
 
+  <!--   No tienes importado cdn font-awesome *borrar*
+        fixes:
+        1.- posicion de imports en app.module 
+        2.- llamar <fa-icon> component en footer --esto lo trae el module FontAwesomeModule
+
+-->
   <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+  <!--     <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
     <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-    <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+  <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li> -->
+
+  <li class="ms-3">
+    <a class="text-muted" href="#">
+      <fa-icon [icon]="['fab', 'twitter']"  style="font-size: 48px; color: Dodgerblue;"></fa-icon>
+    </a>
+  </li>
+  <li class="ms-3">
+    <a class="text-muted" href="#">
+      <fa-icon [icon]="['fab', 'instagram']" style="font-size: 48px; color: #DD2A7B;"></fa-icon>
+    </a>
+  </li>
+  <li class="ms-3">
+    <a class="text-muted" href="#">
+      <fa-icon [icon]="['fab', 'facebook']" style="font-size: 48px; color: #3B5998;"></fa-icon>
+    </a>
+  </li>
   </ul>
 </footer>
